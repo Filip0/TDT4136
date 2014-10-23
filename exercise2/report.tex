@@ -1,0 +1,320 @@
+\documentclass{article}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{xcolor,colortbl}
+\definecolor{newred}{HTML}{e74c3c}
+\definecolor{newblue}{HTML}{3498db}
+\definecolor{newpurple}{HTML}{9b59b6}
+\newcommand{\wombat}{\cellcolor{newred}}
+\newcommand{\pit}{\cellcolor{newblue}}
+\newcommand{\wompit}{\cellcolor{newpurple}}
+
+\begin{document}
+\title{TDT4136 - Assignment 2}
+\author{Filip F Egge}
+\date{October 4, 2013}
+\maketitle
+
+\newpage
+\section*{Task 1 - Models and Entailment in Propositional Logic}
+\subsection*{1)}
+	\begin{center}
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & - &\\ \hline
+			- & B & \wombat \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & \wombat & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\wombat &&  \\ \hline
+			S & - & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & - & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\begin{center}
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & - &\\ \hline
+			- & B & \wompit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & \wombat & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\wombat &&  \\ \hline
+			S & - & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & - & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\begin{center}
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & - &\\ \hline
+			- & B & \wombat \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & \wombat & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\wompit &&  \\ \hline
+			S & - & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & - & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\begin{center}
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & - &\\ \hline
+			- & B & \wompit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & \wombat & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\wompit &&  \\ \hline
+			S & - & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & - & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\begin{center}
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & \pit &\\ \hline
+			- & B & \wombat \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & \wompit & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\wombat &&  \\ \hline
+			S & \pit & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & \pit & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\begin{center}
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & \pit &\\ \hline
+			- & B & \wompit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & \wompit & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\wombat &&  \\ \hline
+			S & \pit & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			- &&  \\ \hline
+			S & \pit & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\begin{center}
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & \pit &\\ \hline
+			- & B & \wombat \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & \wompit & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\wompit &&  \\ \hline
+			S & \pit & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & \pit & \\ \hline
+			- & B & - \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\begin{center}
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & \pit &\\ \hline
+			- & B & \wompit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & \wompit & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\wompit &&  \\ \hline
+			S & \pit & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+		\quad
+		\begin{tabular}{|m{0.25cm}|m{0.25cm}|m{0.25cm}|}
+			\hline
+			\pit &&  \\ \hline
+			S & \pit & \\ \hline
+			- & B & \pit \\ \hline
+		\end{tabular}
+	\end{center}
+
+	The tables above show all the possible worlds. The red square tells us that there is a wumpus occupying that square. The blue square means a pit is located on that square. And purple means that both a wampus and a pit is on that square. The four first rows matches  	\(\alpha_2 = \)``There is no pit in [2,2].'' and the third column matches \(\alpha_3 =\) ``There is a wumpus in [1,3]''. The \textbf{KB} is true for the table in row 2, column 3.
+
+\subsection*{2) Exercise 7.4}
+	\subsubsection*{a) \(False \models True\)}
+	False entails True, this is correct
+	\subsubsection*{b) \(True \models False\)}
+	False
+	\subsubsection*{c) \((A \wedge B) \models (A \Leftrightarrow B)\)}
+	\subsubsection*{d) \((A \Leftrightarrow B) \models (A \lor B)\)}
+	\subsubsection*{e) \((A \Leftrightarrow B) \models (\lnot A \Leftrightarrow B)\)}
+	\subsubsection*{f) \((A \lor B) \wedge (\lnot C \lor \lnot D \lor E) \models (A \lor B \lor C) \lor (B \lor C \lor (D \to E))\)}
+	\subsubsection*{g) \((A \lor B) \wedge (\lnot C \lor \lnot D \lor E) \models (A \lor B) \wedge (\lnot D \lor E)\)}
+	\subsubsection*{h) \((A \lor B) \wedge \lnot(A \to B)\)}
+	\subsubsection*{i) \((A \lor B) \to C \models \lnot(A \to B)\)}
+	\subsubsection*{j) \((C \lor (\lnot A \wedge \lnot B)) \equiv ((A \to C) \wedge (B \to C))\)}
+	\subsubsection*{k) \((A \Leftrightarrow B) \wedge (\lnot A \lor B)\)}
+	\subsubsection*{l) \((A \Leftrightarrow B) \Leftrightarrow C \) has the same number of models as \((A \Leftrightarrow B)\) for any fixed set of proposition symbols that includes A, B, C.}
+
+\subsection*{3) Exercise 7.7}
+	\subsubsection*{a) \(B \lor C\)}
+		There are 3 models in which this sentence is true
+	\subsubsection*{b) \(\lnot A \lor  \lnot B \lor \lnot C \lor \lnot D\)}
+		Using a truth table i have found the number of models to be 15.
+	\subsubsection*{b) \((A \to B) \lor A \lor  \lnot B \lor C \lor D\)}
+		This sentence is always false and has no models.
+
+\subsection*{4)}
+\subsection*{5)}
+	\subsubsection*{a) \(A_1 \lor A_{73}\)}
+		\(3/4 + 2^{100}\)
+	\subsubsection*{b) \(A_7 \lor (A_{19} \wedge A_{33})\)}
+		\(5/8 * 2^{100}\)
+	\subsubsection*{c) \(A_{11} \to A_{22}\)}
+		\(3/4 + 2^{100}\)
+\section*{Task 2 - Resolution in Propositional Logic}
+\subsection*{1) - Convert each of the following sentences to Cunjunctive Normal Form (CNF)}
+	\subsubsection*{a) \(A \wedge B \wedge C\)}
+	Already in CNF
+	\subsubsection*{a) \(A \lor B \lor C\)}
+	Already in CNF
+	\subsubsection*{a) \(A \to (B \lor C)\)}
+	\(\lnot A \lor (A \lor B)\)
+\subsection*{2) - Consider the following Knowledge Base (KB):}
+	\begin{itemize}
+		\item \((A \lor \lnot B) \to \lnot C\)
+		\item \((D \wedge E) \to C\)
+		\item \(A \wedge D\)
+	\end{itemize}
+	Use resolution to show that \(KB \models \lnot E\)
+	\\
+	The first step is to convert the knowledge base into Cunjunctive Normal Form.
+	\begin{itemize}
+		\item \((\lnot A \lor \lnot C) \wedge (\lnot C \lor E)\)
+		\item \(C \lor \lnot D \lor \lnot E\)
+		\item \(A \wedge D\)
+	\end{itemize}
+
+\end{document}
