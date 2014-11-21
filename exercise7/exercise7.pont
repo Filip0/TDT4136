@@ -1,0 +1,180 @@
+; Fri Nov 21 18:10:14 CET 2014
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot usedForFood
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot consideredDelicacy
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot hasGills
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot exercise7_Class13
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot canFly
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot hasWings
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot canSwim
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot isDangerous
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot hasSkin
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot doesWalk
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot movesBy
+		(type SYMBOL)
+		(allowed-values walking swiming flying)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot liesEggs
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Animal
+	(is-a USER)
+	(role abstract)
+	(single-slot isDangerous
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot hasSkin
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot consideredDelicacy
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot movesBy
+		(type SYMBOL)
+		(allowed-values walking swiming flying)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot liesEggs
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass FIsh
+	(is-a Animal)
+	(role abstract)
+	(single-slot hasGills
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot liesEggs
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Shark
+	(is-a FIsh)
+	(role concrete))
+
+(defclass Salmon
+	(is-a FIsh)
+	(role concrete))
+
+(defclass Bird
+	(is-a Animal)
+	(role abstract)
+	(single-slot canFly
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot hasWings
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot doesWalk
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot liesEggs
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Canary
+	(is-a Bird)
+	(role concrete))
+
+(defclass Ostrich
+	(is-a Bird)
+	(role concrete))
+
+(defclass Mammal
+	(is-a Animal)
+	(role abstract)
+	(single-slot canFly
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot usedForFood
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot doesWalk
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Cow
+	(is-a Mammal)
+	(role concrete))
+
+(defclass Bat
+	(is-a Mammal)
+	(role concrete))

@@ -1,0 +1,49 @@
+; Fri Nov 21 18:10:14 CET 2014
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([exercise7_Class25] of  Shark
+
+	(hasGills TRUE)
+	(hasSkin TRUE)
+	(isDangerous TRUE)
+	(liesEggs FALSE)
+	(movesBy swiming))
+
+([exercise7_Class28] of  Salmon
+
+	(consideredDelicacy TRUE)
+	(hasGills TRUE)
+	(hasSkin TRUE)
+	(liesEggs TRUE)
+	(movesBy swiming))
+
+([exercise7_Class29] of  Canary
+
+	(canFly TRUE)
+	(hasSkin TRUE)
+	(hasWings TRUE)
+	(liesEggs TRUE)
+	(movesBy flying))
+
+([exercise7_Class30] of  Ostrich
+
+	(doesWalk TRUE)
+	(hasSkin TRUE)
+	(hasWings TRUE)
+	(liesEggs TRUE)
+	(movesBy walking))
+
+([exercise7_Class31] of  Bat
+
+	(canFly TRUE)
+	(hasSkin TRUE)
+	(movesBy flying))
+
+([exercise7_Class32] of  Cow
+
+	(doesWalk TRUE)
+	(hasSkin TRUE)
+	(movesBy walking)
+	(usedForFood TRUE))
